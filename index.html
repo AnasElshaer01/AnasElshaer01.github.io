@@ -421,6 +421,9 @@
 
         .skill-category-details:nth-child(2) .category-title-text::before { background: var(--accent-secondary); }
         .skill-category-details:nth-child(3) .category-title-text::before { background: var(--accent-tertiary); }
+        .skill-category-details:nth-child(4) .category-title-text::before { background: var(--accent-primary); }
+        .skill-category-details:nth-child(5) .category-title-text::before { background: var(--accent-secondary); }
+        .skill-category-details:nth-child(6) .category-title-text::before { background: var(--accent-tertiary); }
 
         .category-icon {
             font-size: 1.5rem;
@@ -504,8 +507,8 @@
             transition: transform 0.4s ease;
         }
 
-        .project-card:nth-child(2)::before { background: var(--accent-secondary); }
-        .project-card:nth-child(3)::before { background: var(--accent-tertiary); }
+        .project-card:nth-child(3n+2)::before { background: var(--accent-secondary); }
+        .project-card:nth-child(3n)::before { background: var(--accent-tertiary); }
 
         .project-card:hover {
             transform: translateY(-8px);
@@ -521,7 +524,28 @@
             font-weight: 700;
             margin-bottom: 16px;
             color: var(--text-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
         }
+
+        .project-arrow {
+            font-size: 1.4rem;
+            color: #ccc;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translate(0, 0);
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .project-card:hover .project-arrow {
+            transform: translate(4px, -4px);
+        }
+
+        .project-card:nth-child(3n+1):hover .project-arrow { color: var(--accent-primary); }
+        .project-card:nth-child(3n+2):hover .project-arrow { color: var(--accent-secondary); }
+        .project-card:nth-child(3n):hover .project-arrow { color: var(--accent-tertiary); }
 
         .project-card p {
             font-size: 1.1rem;
@@ -959,7 +983,7 @@
             <div class="skills-accordion">
                 <details class="skill-category-details" open>
                     <summary class="category-summary">
-                        <span class="category-title-text">Programming Languages</span>
+                        <span class="category-title-text">Languages</span>
                         <span class="category-icon">+</span>
                     </summary>
                     <div class="skills-dropdown-content">
@@ -969,36 +993,47 @@
                             <span class="skill-item">Java</span>
                             <span class="skill-item">JavaScript</span>
                             <span class="skill-item">C++</span>
-                            <span class="skill-item">HTML & CSS</span>
+                            <span class="skill-item">HTML/CSS</span>
                         </div>
                     </div>
                 </details>
 
                 <details class="skill-category-details">
                     <summary class="category-summary">
-                        <span class="category-title-text">Frameworks & Libs <span style="font-size: 0.9rem; color: #888; font-weight:400; margin-left: 8px;">(AI & Backend)</span></span>
+                        <span class="category-title-text">Frameworks & Libs</span>
                         <span class="category-icon">+</span>
                     </summary>
-                    <div class="skills-dropdown-content">
-                        <div class="skills-list">
-                            <span class="skill-item">LangGraph</span>
-                            <span class="skill-item">Crew AI</span>
-                            <span class="skill-item">AutoGen</span>
-                            <span class="skill-item">PyTorch</span>
-                            <span class="skill-item">TensorFlow</span>
-                            <span class="skill-item">Keras</span>
-                            <span class="skill-item">HuggingFace</span>
-                            <span class="skill-item">Langchain</span>
-                            <span class="skill-item">FastAPI</span>
-                            <span class="skill-item">Django</span>
-                            <span class="skill-item">Flask</span>
-                            <span class="skill-item">Pandas</span>
-                            <span class="skill-item">NumPy</span>
-                            <span class="skill-item">Scikit-learn</span>
-                            <span class="skill-item">XGBoost</span>
-                            <span class="skill-item">OpenCV</span>
-                            <span class="skill-item">Matplotlib</span>
-                            <span class="skill-item">Seaborn</span>
+                    <div class="skills-dropdown-content" style="display: flex; flex-direction: column; gap: 20px;">
+                        <div class="skill-subcategory">
+                            <h4 style="font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 600;">Backend</h4>
+                            <div class="skills-list">
+                                <span class="skill-item">Django</span>
+                                <span class="skill-item">FastAPI</span>
+                                <span class="skill-item">DRF</span>
+                                <span class="skill-item">BeautifulSoup</span>
+                            </div>
+                        </div>
+                        <div class="skill-subcategory">
+                            <h4 style="font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 600;">AI / LLM</h4>
+                            <div class="skills-list">
+                                <span class="skill-item">PyTorch</span>
+                                <span class="skill-item">TensorFlow</span>
+                                <span class="skill-item">Scikit-learn</span>
+                                <span class="skill-item">XGBoost</span>
+                                <span class="skill-item">NumPy</span>
+                                <span class="skill-item">Pandas</span>
+                                <span class="skill-item">OpenCV</span>
+                                <span class="skill-item">HuggingFace</span>
+                            </div>
+                        </div>
+                        <div class="skill-subcategory">
+                            <h4 style="font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 600;">Gen AI</h4>
+                            <div class="skills-list">
+                                <span class="skill-item">LangChain</span>
+                                <span class="skill-item">LangGraph</span>
+                                <span class="skill-item">LlamaIndex</span>
+                                <span class="skill-item">CrewAI</span>
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -1010,15 +1045,14 @@
                     </summary>
                     <div class="skills-dropdown-content">
                         <div class="skills-list">
-                            <span class="skill-item">LLMs</span>
-                            <span class="skill-item">Multi-Agent Systems</span>
-                            <span class="skill-item">RAG</span>
-                            <span class="skill-item">MLOps</span>
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">MongoDB</span>
+                            <span class="skill-item">Pinecone</span>
+                            <span class="skill-item">Milvus</span>
                             <span class="skill-item">Docker</span>
+                            <span class="skill-item">MLflow</span>
+                            <span class="skill-item">Apache Spark</span>
                             <span class="skill-item">Azure</span>
-                            <span class="skill-item">Spark</span>
-                            <span class="skill-item">DBT</span>
-                            <span class="skill-item">PowerBI</span>
                             <span class="skill-item">Linux</span>
                         </div>
                     </div>
@@ -1030,19 +1064,29 @@
             <div class="section-tag">03 — Projects</div>
             
             <div class="project-grid">
-                <a href="#" class="project-card">
-                    <h3>Autonomous Resolution Agent</h3>
-                    <p>Engineered a multi-agent workflow utilizing LangGraph and AutoGen capable of reasoning through and autonomously resolving complex software engineering tickets.</p>
-                </a>
+                <div class="project-card" style="cursor: default;">
+                    <h3><span>Autonomous Resolution Agent</span> <span style="font-size: 0.85rem; color: var(--text-color); font-weight: 600; padding: 4px 10px; background: rgba(0, 0, 0, 0.05); border-radius: 100px; display: inline-flex; align-items: center; gap: 6px; line-height: 1;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Confidential</span></h3>
+                    <p>Multi-agent LangGraph workflow that autonomously reasons through and resolves complex software tickets.</p>
+                </div>
 
-                <a href="#" class="project-card">
-                    <h3>Enterprise Financial RAG</h3>
-                    <p>Architected a high-precision Retrieval-Augmented Generation pipeline utilizing semantic chunking and vector search over 20,000+ unstructured corporate documents.</p>
+                <a href="https://ranktera.com/" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <h3><span>RankTera — SEO Intelligence Platform</span> <span class="project-arrow">↗</span></h3>
+                    <p>Built backend AI pipelines and real-time rank tracking for a 3,000+ user SEO platform, reducing content production time by 40% via automated LLM generation.</p>
                 </a>
                 
-                <a href="#" class="project-card">
-                    <h3>Scalable LLM Inference API</h3>
-                    <p>Built a high-throughput, low-latency asynchronous microservice infrastructure for serving open-source AI models using advanced continuous batching techniques.</p>
+                <a href="https://drive.google.com/file/d/1k6ugAh1dK5JLVQoTG-szzpBL3bc3ujwG/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <h3><span>Query Sensei — NL-to-SQL Analytics</span> <span class="project-arrow">↗</span></h3>
+                    <p>Self-service analytics platform using agent orchestration and semantic search. Fine-tuned Llama-3-8B and improved SQL generation BLEU score from 0.3 to 0.7.</p>
+                </a>
+
+                <a href="https://github.com/AnasElshaer01/n8n-Slack-Personal-Assistant" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <h3><span>n8n Slack Personal Assistant</span> <span class="project-arrow">↗</span></h3>
+                    <p>Developed an automated Slack personal assistant using n8n and Docker, featuring an AI-powered conversational agent, smart task extraction, and a daily morning briefing service.</p>
+                </a>
+
+                <a href="https://github.com/AnasElshaer01/Liquid-level-detection" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <h3><span>Liquid Level Detection</span> <span class="project-arrow">↗</span></h3>
+                    <p>Engineered a computer vision solution to accurately detect and measure liquid levels using Python and OpenCV image processing algorithms.</p>
                 </a>
             </div>
         </section>
