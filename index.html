@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <style>
         :root {
             --bg-color: #FAFAFA; /* Bright, clean joyful white */
@@ -886,8 +887,8 @@
             <span class="abstract-mark"></span>
         </a>
         <div class="nav-links">
-            <a href="#expertise" class="nav-link">Expertise</a>
             <a href="#projects" class="nav-link">Projects</a>
+            <a href="#expertise" class="nav-link">Expertise</a>
             <a href="" class="nav-cv" target="_blank" rel="noopener noreferrer">Resume / CV</a>
             <a href="#contact" class="nav-cta">Reach Out</a>
         </div>
@@ -936,8 +937,49 @@
 
         <!-- About paragraph removed as requested -->
 
+        <section id="projects" class="anim">
+            <div class="section-tag">01 — Selected Projects</div>
+            
+            <div class="project-grid">
+                <a href="https://ranktera.com/" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <h3><span>RankTera — SEO Intelligence Platform</span> <span class="project-arrow">↗</span></h3>
+                    <p>Architected multi-agent AI workflows for an enterprise SEO intelligence platform. Built autonomous pipelines that analyze search trends and automate high-volume, multi-language content generation, drastically reducing production time.</p>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; align-items: center;">
+                        <i class="devicon-django-plain colored" style="font-size: 1.5rem;" title="Django"></i>
+                        <i class="devicon-postgresql-plain colored" style="font-size: 1.5rem;" title="PostgreSQL"></i>
+                        <i class="devicon-redis-plain colored" style="font-size: 1.5rem;" title="Redis"></i>
+                        <i class="devicon-docker-plain colored" style="font-size: 1.5rem;" title="Docker"></i>
+                        <i class="devicon-digitalocean-plain colored" style="font-size: 1.5rem;" title="DigitalOcean"></i>
+                    </div>
+                </a>
+
+                <a href="https://querysensei.earthsoftwares.online" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <h3><span>Query Sensei — NL-to-SQL Analytics</span> <span class="project-arrow">↗</span></h3>
+                    <p>AI copilot for database querying, analytics, and instant chart generation. Translates everyday business questions into optimized SQL queries and renders interactive data visualizations.</p>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; align-items: center;">
+                        <i class="devicon-nextjs-plain colored" style="font-size: 1.5rem;" title="Next.js"></i>
+                        <i class="devicon-fastapi-plain colored" style="font-size: 1.5rem;" title="FastAPI"></i>
+                        <i class="devicon-typescript-plain colored" style="font-size: 1.5rem;" title="TypeScript"></i>
+                        <i class="devicon-mongodb-plain colored" style="font-size: 1.5rem;" title="MongoDB"></i>
+                        <img src="https://cdn.simpleicons.org/langgraph" alt="LangGraph" width="24" height="24" title="LangGraph" />
+                    </div>
+                </a>
+                
+                <a href="https://github.com/AnasElshaer01/Nova-Voice-Agent" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <h3><span>Nova Voice Agent</span> <span class="project-arrow">↗</span></h3>
+                    <p>Real-time conversational AI voice assistant designed to handle complex customer support and reservation logic for a car rental service. It provides a deterministic and hallucination-free experience, reducing wait times and support overhead.</p>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; align-items: center;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" width="24" height="24" title="Python" />
+                        <span style="background-color: #1A1A1A; padding: 2px; border-radius: 4px; display: inline-flex;"><img src="https://cdn.simpleicons.org/livekit" alt="LiveKit" width="20" height="20" title="LiveKit" /></span>
+                        <img src="https://cdn.simpleicons.org/deepgram" alt="Deepgram" width="24" height="24" title="Deepgram" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="OpenAI" width="24" height="24" title="OpenAI" />
+                    </div>
+                </a>
+            </div>
+        </section>
+
         <section id="expertise" class="anim">
-            <div class="section-tag">01 — Expertise</div>
+            <div class="section-tag">02 — Expertise</div>
             <div class="marquee-wrapper">
                 <div class="marquee-content">
                     <div class="expertise-card">
@@ -955,6 +997,10 @@
                     <div class="expertise-card">
                         <h3>High-Performance Backends</h3>
                         <p>Building resilient, asynchronous microservices and reliable data orchestration architectures to support data-intensive AI workloads.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <h3>Fullstack Development</h3>
+                        <p>Delivering end-to-end web applications with modern, responsive frontends and robust, scalable backend architectures.</p>
                     </div>
                 </div>
                 <div class="marquee-content" aria-hidden="true">
@@ -974,120 +1020,11 @@
                         <h3>High-Performance Backends</h3>
                         <p>Building resilient, asynchronous microservices and reliable data orchestration architectures to support data-intensive AI workloads.</p>
                     </div>
+                    <div class="expertise-card">
+                        <h3>Fullstack Development</h3>
+                        <p>Delivering end-to-end web applications with modern, responsive frontends and robust, scalable backend architectures.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="skills" class="anim">
-            <div class="section-tag">02 — Skills</div>
-            <div class="skills-accordion">
-                <details class="skill-category-details" open>
-                    <summary class="category-summary">
-                        <span class="category-title-text">Languages</span>
-                        <span class="category-icon">+</span>
-                    </summary>
-                    <div class="skills-dropdown-content">
-                        <div class="skills-list">
-                            <span class="skill-item">Python</span>
-                            <span class="skill-item">SQL</span>
-                            <span class="skill-item">Java</span>
-                            <span class="skill-item">JavaScript</span>
-                            <span class="skill-item">C++</span>
-                            <span class="skill-item">HTML/CSS</span>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="skill-category-details">
-                    <summary class="category-summary">
-                        <span class="category-title-text">Frameworks & Libs</span>
-                        <span class="category-icon">+</span>
-                    </summary>
-                    <div class="skills-dropdown-content" style="display: flex; flex-direction: column; gap: 20px;">
-                        <div class="skill-subcategory">
-                            <h4 style="font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 600;">Backend</h4>
-                            <div class="skills-list">
-                                <span class="skill-item">Django</span>
-                                <span class="skill-item">FastAPI</span>
-                                <span class="skill-item">DRF</span>
-                                <span class="skill-item">BeautifulSoup</span>
-                            </div>
-                        </div>
-                        <div class="skill-subcategory">
-                            <h4 style="font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 600;">AI / LLM</h4>
-                            <div class="skills-list">
-                                <span class="skill-item">PyTorch</span>
-                                <span class="skill-item">TensorFlow</span>
-                                <span class="skill-item">Scikit-learn</span>
-                                <span class="skill-item">XGBoost</span>
-                                <span class="skill-item">NumPy</span>
-                                <span class="skill-item">Pandas</span>
-                                <span class="skill-item">OpenCV</span>
-                                <span class="skill-item">HuggingFace</span>
-                            </div>
-                        </div>
-                        <div class="skill-subcategory">
-                            <h4 style="font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 600;">Gen AI</h4>
-                            <div class="skills-list">
-                                <span class="skill-item">LangChain</span>
-                                <span class="skill-item">LangGraph</span>
-                                <span class="skill-item">LlamaIndex</span>
-                                <span class="skill-item">CrewAI</span>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="skill-category-details">
-                    <summary class="category-summary">
-                        <span class="category-title-text">Tools & Tech</span>
-                        <span class="category-icon">+</span>
-                    </summary>
-                    <div class="skills-dropdown-content">
-                        <div class="skills-list">
-                            <span class="skill-item">PostgreSQL</span>
-                            <span class="skill-item">MongoDB</span>
-                            <span class="skill-item">Pinecone</span>
-                            <span class="skill-item">Milvus</span>
-                            <span class="skill-item">Docker</span>
-                            <span class="skill-item">MLflow</span>
-                            <span class="skill-item">Apache Spark</span>
-                            <span class="skill-item">Azure</span>
-                            <span class="skill-item">Linux</span>
-                        </div>
-                    </div>
-                </details>
-            </div>
-        </section>
-
-        <section id="projects" class="anim">
-            <div class="section-tag">03 — Projects</div>
-            
-            <div class="project-grid">
-                <div class="project-card" style="cursor: default;">
-                    <h3><span>Autonomous Resolution Agent</span> <span style="font-size: 0.85rem; color: var(--text-color); font-weight: 600; padding: 4px 10px; background: rgba(0, 0, 0, 0.05); border-radius: 100px; display: inline-flex; align-items: center; gap: 6px; line-height: 1;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Confidential</span></h3>
-                    <p>Multi-agent LangGraph workflow that autonomously reasons through and resolves complex software tickets.</p>
-                </div>
-
-                <a href="https://ranktera.com/" target="_blank" rel="noopener noreferrer" class="project-card">
-                    <h3><span>RankTera — SEO Intelligence Platform</span> <span class="project-arrow">↗</span></h3>
-                    <p>Built backend AI pipelines and real-time rank tracking for a 3,000+ user SEO platform, reducing content production time by 40% via automated LLM generation.</p>
-                </a>
-                
-                <a href="https://drive.google.com/file/d/1k6ugAh1dK5JLVQoTG-szzpBL3bc3ujwG/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="project-card">
-                    <h3><span>Query Sensei — NL-to-SQL Analytics</span> <span class="project-arrow">↗</span></h3>
-                    <p>Self-service analytics platform using agent orchestration and semantic search. Fine-tuned Llama-3-8B and improved SQL generation BLEU score from 0.3 to 0.7.</p>
-                </a>
-
-                <a href="https://github.com/AnasElshaer01/n8n-Slack-Personal-Assistant" target="_blank" rel="noopener noreferrer" class="project-card">
-                    <h3><span>n8n Slack Personal Assistant</span> <span class="project-arrow">↗</span></h3>
-                    <p>Developed an automated Slack personal assistant using n8n and Docker, featuring an AI-powered conversational agent, smart task extraction, and a daily morning briefing service.</p>
-                </a>
-
-                <a href="https://github.com/AnasElshaer01/Liquid-level-detection" target="_blank" rel="noopener noreferrer" class="project-card">
-                    <h3><span>Liquid Level Detection</span> <span class="project-arrow">↗</span></h3>
-                    <p>Engineered a computer vision solution to accurately detect and measure liquid levels using Python and OpenCV image processing algorithms.</p>
-                </a>
             </div>
         </section>
 
